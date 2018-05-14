@@ -64,7 +64,7 @@ main {
   width: auto;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 768px) {
   .container {
     display: block;
   }
@@ -75,7 +75,7 @@ main {
     height: 50px;
     margin: 0;
     padding: 0;
-    position: sticky;
+    position: relative;
     top: 0;
     width: 100%;
   }

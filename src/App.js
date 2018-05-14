@@ -24,7 +24,7 @@ class App extends Component {
 
   handleClick = index => {
     let {main, menu} = this.refs;
-    if (window.innerWidth <= 500) {
+    if (window.innerWidth <= 768) {
       menu.style.width = "0";
       menu.style.opacity = 0;
       main.style.left = "0";
@@ -43,9 +43,15 @@ class App extends Component {
       show = false;
       this.setState({show});
     } else {
-      menu.style.width = "50%";
+      if (window.innerWidth <= 768 && window.innerWidth > 500) {
+        menu.style.width = "30%";
+        main.style.left = "30%";
+      }
+      else {
+        menu.style.width = "50%";
+        main.style.left = "50%";
+      }
       menu.style.opacity = 1;
-      main.style.left = "50%";
       show = true;
       this.setState({show})
     }
