@@ -1,0 +1,132 @@
+.container {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  width: 100vw;
+}
+
+ul {
+  list-style: none;
+}
+
+menu {
+  display: none;
+}
+
+nav {
+  background: black;
+  display: block;
+  height: auto;
+  position: relative;
+  width: auto;
+}
+
+menu span, nav h2 {
+  color: white;
+  text-align: center;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+}
+
+menu ul li, nav ul li {
+  background: black;
+  color: white;
+  padding: 5% 0;
+  cursor: pointer;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+menu ul li:hover, nav ul li:hover {
+  background: white;
+  color: black;
+}
+
+main {
+  background: #f1f2f6;
+  height: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: relative;
+  transition: .5s;
+  width: auto;
+}
+
+@media (max-width: 500px) {
+  .container {
+    display: block;
+  }
+
+  menu {
+    background: black;
+    display: block;
+    height: 50px;
+    margin: 0;
+    padding: 0;
+    position: sticky;
+    top: 0;
+    width: 100%;
+  }
+
+  menu > span {
+    border: none;
+    cursor: pointer;
+    height: auto;
+    left: 5%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: auto;
+  }
+
+  menu > span:hover {
+    border: 1px solid black;
+  }
+
+  menu ul {
+    background: black;
+    display: block;
+    height: 100vh;
+    left: 0;
+    margin: 0;
+    opacity: 0;
+    overflow: hidden;
+    padding: 20% 0 0 0;
+    position: absolute;
+    top: 0;
+    transition: .5s;
+    width: 0;
+    z-index: 1;
+  }
+
+  menu ul > span {
+    border: 1px solid black;
+    cursor: pointer;
+    margin: 0;
+    position: absolute;
+    right: 50%;
+    top: 5%;
+    transform: translateX(-50%);
+    width: auto;
+  }
+
+  nav {
+    display: none;
+  }
+
+  main {
+    height: 100%;
+  }
+}

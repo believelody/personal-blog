@@ -1,0 +1,71 @@
+.work {
+  padding: 3%;
+}
+
+section {
+  border: 1px solid black;
+  display: grid;
+  grid-template-areas:
+  "img titre"
+  "img contenu"
+  "img lien";
+  height: 100%;
+  margin: 0 0 3% 0;
+  padding: 0;
+}
+
+section span {
+  grid-area: img;
+  height: 180px;
+  position: relative;
+  width: 218px;
+}
+
+section span img {
+  left: 0;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+section h3 {
+  grid-area: titre;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+section p {
+  grid-area: contenu;
+  margin: 0 2%;
+}
+
+section a {
+  background: #2980b9;
+  color: white;
+  grid-area: lien;
+  padding: 2% 0;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+}
+
+@media (max-width: 500px) {
+  section {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    position: relative;
+    width: 100%;
+  }
+
+  section span {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  section p {
+    text-align: left;
+  }
+}
