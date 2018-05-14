@@ -1,5 +1,6 @@
 .about {
-  display: block;
+  display: flex;
+  flex-direction: column;
   height: 100%;
   overflow: auto;
   position: relative;
@@ -81,6 +82,7 @@ b {
   background: #2980b9;
   bottom: 0;
   color: white;
+  height: auto;
   padding: 2% 0;
   position: absolute;
   text-align: center;
@@ -118,6 +120,7 @@ b {
 }
 
 .tools {
+  align-items: stretch;
   display: flex;
   height: auto;
   flex-wrap: wrap;
@@ -143,6 +146,7 @@ b {
 .tools li h6 {
   margin: 0;
   padding: 0;
+  width: 100%;
 }
 
 @media (max-width: 768px) {
@@ -159,8 +163,8 @@ b {
   }
 
   .card {
-    display: flex;
-    height: auto;
+    display: block;
+    height: 100%;
     position: relative;
     width: auto;
   }
@@ -169,7 +173,16 @@ b {
     display: none;
   }
 
+  .card-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card div a {
+    position: relative;
+  }
+
   .tools li {
-    padding: 0 3%;
+    padding: 0 5%;
   }
 }
