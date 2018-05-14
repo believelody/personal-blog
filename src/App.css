@@ -67,6 +67,7 @@ main {
 @media (max-width: 768px) {
   .container {
     display: block;
+    overflow: auto;
   }
 
   menu {
@@ -124,9 +125,5 @@ main {
 
   nav {
     display: none;
-  }
-
-  main {
-    height: 100%;
   }
 }
